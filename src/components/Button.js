@@ -11,7 +11,6 @@ import {
 import { faShoppingCart, faBox } from "@fortawesome/free-solid-svg-icons";
 
 export default function Button() {
-  console.log("Hello");
   const [add, setAdd] = useState(false);
   return (
     <section>

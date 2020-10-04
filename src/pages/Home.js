@@ -7,7 +7,9 @@ export default function Home({ sidebar, setRef, setSideBar }) {
     <>
       {sidebar && <Sidebar isOpen={sidebar} ref={setRef} />}
       <div className="container py-4">
-        <Button />
+        <div className="col-12">
+          <Button />
+        </div>
       </div>
     </>
   );
