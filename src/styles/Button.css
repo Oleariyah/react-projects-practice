@@ -1,0 +1,186 @@
+button,
+button:active,
+button:focus {
+  border: none;
+  outline: 0;
+}
+
+.button-1 {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s width ease-out;
+}
+
+.button-1:hover {
+  width: 160px;
+}
+
+.button-1 .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+
+.button-1 span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.button-1 .icon i {
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.button-2 {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.1s transform ease-out;
+  cursor: pointer;
+}
+
+.button-2 .icon-2 {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+
+.button-2:hover {
+  transform: translate(0, -10px);
+}
+
+.button-3 {
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s transform ease-in-out;
+}
+
+.button-3 .icon-3 {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+
+.button-3:hover {
+  transform: scale(0.9);
+}
+
+.cart {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -10%;
+  font-size: 1.4em;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  position: absolute;
+  z-index: 3;
+  top: -20%;
+  left: 52%;
+  font-size: 0.8em;
+  transform: translate(-50%, -50%);
+}
+
+.clicked-1 {
+  animation: cart 1.5s ease-in-out forwards;
+}
+
+.clicked-2 {
+  animation: box 1.5s ease-in-out forwards;
+}
+
+.clicked-3 {
+  animation: text1 1.5s ease-in-out forwards;
+}
+
+.clicked-4 {
+  animation: text2 1.5s ease-in-out forwards;
+}
+
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+@keyframes box {
+  0%,
+  40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  100% {
+    top: 40%;
+    left: 110%;
+  }
+}
+
+.button-3 span {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  font-size: 1.3em;
+  transform: translate(-50%, -50%);
+}
+
+.add-to-cart {
+  opacity: 1;
+}
+.added {
+  opacity: 0;
+}
+
+@keyframes text1 {
+  0% {
+    opacity: 1;
+  }
+  20%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes text2 {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
