@@ -12,7 +12,6 @@ export default function Header({ sidebar, setSideBar }) {
             type="button"
             className="btn btn-secondary w-100"
             onClick={e => {
-              console.log("Hello");
               e.preventDefault();
               setSideBar(!sidebar);
             }}

@@ -13,7 +13,7 @@ import { faShoppingCart, faBox } from "@fortawesome/free-solid-svg-icons";
 export default function Button() {
   const [add, setAdd] = useState(false);
   return (
-    <section>
+    <section className="mb-4">
       <h1>Buttons</h1>
       <hr />
       {/*button 1*/}

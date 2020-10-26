@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import { Header } from "./components";
+import { Header, Sidebar } from "./components";
 import { Home } from "./pages";
 import useOnClickOutside from "./modules/onClickOutside";
 import "./styles/App.css";
@@ -13,19 +13,9 @@ export default () => {
   return (
     <Fragment>
       <Header sidebar={sidebar} setSideBar={setSideBar} />
+      {sidebar && <Sidebar isOpen={sidebar} setRef={setRef} />}
       <Switch>
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <Home
-              {...props}
-              sidebar={sidebar}
-              setRef={setRef}
-              setSideBar={setSideBar}
-            />
-          )}
-        />
+        <Route exact path="/" render={() => <Home />} />
       </Switch>
     </Fragment>
   );

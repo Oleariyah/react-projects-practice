@@ -1,0 +1,421 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+.wrapper {
+  background: rgba(219, 223, 230, 0.3);
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.close-wrapper,
+.wrapper {
+  position: absolute;
+  z-index: 1000;
+  height: 100vh;
+  width: 500px;
+  -webkit-animation-name: rightSlideIn;
+  animation-name: rightSlideIn;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+}
+.close-wrapper {
+  background: rgba(199, 195, 195, 0.3);
+  animation-direction: reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.content {
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.content,
+.content-close {
+  -webkit-animation-name: sidebarContent;
+  animation-name: sidebarContent;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+}
+.content-close {
+  animation-direction: reverse;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.link-1 {
+  color: #fff;
+  -webkit-animation-name: firstLink;
+  animation-name: firstLink;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.link-2 {
+  color: #fff;
+  -webkit-animation-name: firstLink;
+  animation-name: firstLink;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.link-3 {
+  color: #fff;
+  -webkit-animation-name: firstLink;
+  animation-name: firstLink;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.card-section {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.card-section,
+.card-section-close {
+  -webkit-animation-name: topSlideIn;
+  animation-name: topSlideIn;
+  -webkit-animation-duration: 0.9s;
+  animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+.card-section-close {
+  animation-direction: reverse;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes rightSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rightSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes topSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes topSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes firstLink {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes firstLink {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.btn-primary {
+  height: 50px;
+  width: 50px;
+  transition-property: background-color, transform, border-radius, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.6s;
+  transform: rotate(0deg);
+}
+.btn-primary:hover {
+  background-color: orange;
+  color: #000;
+  transform: rotate(-1turn);
+  border-radius: 50%;
+}
+button,
+button:active,
+button:focus {
+  border: none;
+  outline: 0;
+}
+.button-1 {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.3s ease-out;
+}
+.button-1:hover {
+  width: 160px;
+}
+.button-1 .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+.button-1 span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+}
+.button-1 .icon i {
+  font-size: 25px;
+  line-height: 60px;
+}
+.button-2 {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease-out;
+  cursor: pointer;
+}
+.button-2 .icon-2 {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+.button-2:hover {
+  transform: translateY(-10px);
+}
+.button-3 {
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.button-3 .icon-3 {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  box-sizing: border-box;
+  line-height: 60px;
+}
+.button-3:hover {
+  transform: scale(0.9);
+}
+.cart {
+  z-index: 2;
+  top: 50%;
+  left: -10%;
+  font-size: 1.4em;
+}
+.box,
+.cart {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.box {
+  z-index: 3;
+  top: -20%;
+  left: 52%;
+  font-size: 0.8em;
+}
+.clicked-1 {
+  -webkit-animation: cart 1.5s ease-in-out forwards;
+  animation: cart 1.5s ease-in-out forwards;
+}
+.clicked-2 {
+  -webkit-animation: box 1.5s ease-in-out forwards;
+  animation: box 1.5s ease-in-out forwards;
+}
+.clicked-3 {
+  -webkit-animation: text1 1.5s ease-in-out forwards;
+  animation: text1 1.5s ease-in-out forwards;
+}
+.clicked-4 {
+  -webkit-animation: text2 1.5s ease-in-out forwards;
+  animation: text2 1.5s ease-in-out forwards;
+}
+@-webkit-keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  to {
+    left: 110%;
+  }
+}
+@keyframes cart {
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  to {
+    left: 110%;
+  }
+}
+@-webkit-keyframes box {
+  0%,
+  40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  to {
+    top: 40%;
+    left: 110%;
+  }
+}
+@keyframes box {
+  0%,
+  40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  to {
+    top: 40%;
+    left: 110%;
+  }
+}
+.button-3 span {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  font-size: 1.3em;
+  transform: translate(-50%, -50%);
+}
+.add-to-cart {
+  opacity: 1;
+}
+.added {
+  opacity: 0;
+}
+@-webkit-keyframes text1 {
+  0% {
+    opacity: 1;
+  }
+  20%,
+  to {
+    opacity: 0;
+  }
+}
+@keyframes text1 {
+  0% {
+    opacity: 1;
+  }
+  20%,
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes text2 {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes text2 {
+  0%,
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body,
+html {
+  font-family: Heebo;
+  height: 100%;
+  background-color: #f0f2f7;
+}
+.App-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App-logo {
+  -webkit-animation: App-logo-spin 20s linear infinite;
+  animation: App-logo-spin 20s linear infinite;
+  height: 40vmin;
+  pointer-events: none;
+}
+/*# sourceMappingURL=main.eeeb1206.chunk.css.map */
