@@ -1,20 +1,30 @@
-import React, { forwardRef } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Sidebar.css";
 
 const Sidebar = ({ isOpen, setRef }) => {
   return (
     <div ref={setRef} className={isOpen ? "wrapper" : "close-wrapper"}>
       <div className={isOpen ? "content p-5" : "content-close p-5"}>
-        <div className=" list-group">
-          <a className="list-group-item list-group-item-action link-1">
+        <div className="list-group">
+          <Link
+            to="/react-spring"
+            className="list-group-item list-group-item-action link-1"
+          >
+            React Spring Animations
+          </Link>
+          <Link
+            to="/react-spring"
+            className="list-group-item list-group-item-action link-2"
+          >
             Hello world
-          </a>
-          <a className="list-group-item list-group-item-action link-2">
+          </Link>
+          <Link
+            to="/react-spring"
+            className="list-group-item list-group-item-action link-3"
+          >
             Hello world
-          </a>
-          <a className="list-group-item list-group-item-action link-3">
-            Hello world
-          </a>
+          </Link>
         </div>
         <div
           className={isOpen ? "card-section my-5" : "card-section-close my-5"}

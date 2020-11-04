@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Button, Lines } from "../components";
 
 export default function Home() {
