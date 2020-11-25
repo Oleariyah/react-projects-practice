@@ -9,6 +9,7 @@ import {
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
 import { faShoppingCart, faBox } from "@fortawesome/free-solid-svg-icons";
+import TwitterFav from "./TwitterFav";
 
 export default function Button() {
   const [add, setAdd] = useState(false);
@@ -135,13 +136,16 @@ export default function Button() {
             </div>
           </div>
         </div>
+
+        <div className="py-4 text-center">
+          <div className="button-5 mr-4">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox">
+              <TwitterFav />
+            </label>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
-// login === 1
-// ? "lock login-clicked-1"
-// : login === 2
-// ? "lock login-clicked-2"
-// : "lock"
-// }
