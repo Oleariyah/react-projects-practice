@@ -13,6 +13,7 @@ import { faShoppingCart, faBox } from "@fortawesome/free-solid-svg-icons";
 export default function Button() {
   const [add, setAdd] = useState(false);
   const [login, setLogin] = useState(0);
+  console.log(login);
 
   return (
     <section className="mb-4">
@@ -109,15 +110,38 @@ export default function Button() {
         <div className="py-4 text-center">
           <div
             className="button-4 mr-4"
-            onClick={() => setLogin(login !== 2 ? login + 1 : 0)}
+            onClick={() => setLogin(login !== 3 ? login + 1 : 0)}
           >
             <span className="mr-2">Login</span>
-            <div className="lock-container" />
-            <div className="lock" />
-            <div className="keyhole" />
+            <div className={login === 1 ? "lock login-clicked-1" : "lock"}>
+              <div
+                className={
+                  login === 3
+                    ? "lock-handle-curve login-clicked-3"
+                    : login === 2
+                    ? "lock-handle-curve login-clicked-2"
+                    : "lock-handle-curve"
+                }
+              />
+              <div
+                className={
+                  login === 3
+                    ? "lock-handle login-clicked-3"
+                    : login === 2
+                    ? "lock-handle login-clicked-2"
+                    : "lock-handle"
+                }
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
+// login === 1
+// ? "lock login-clicked-1"
+// : login === 2
+// ? "lock login-clicked-2"
+// : "lock"
+// }
