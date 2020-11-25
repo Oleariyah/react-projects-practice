@@ -1,0 +1,115 @@
+.horizontal-line {
+  position: relative;
+  left: 0;
+  width: 100px;
+  border-bottom: 3px solid black;
+  animation: animate 1s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 4000ms;
+}
+
+.round-line {
+  position: relative;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  border: 3px solid black;
+  border-radius: 50%;
+  animation: animate 1s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 4000ms;
+}
+
+.box-loading-line {
+  height: 50px;
+  width: 50px;
+  border: 3px solid black;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.box-line {
+  height: 50px;
+  width: 50px;
+  border: 3px solid black;
+  animation-name: scale;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.shining {
+  height: 50px;
+  width: 50px;
+  animation-name: scale;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.loading {
+  position: relative;
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.draw-line {
+  width: 3px;
+  height: 3px;
+  animation-name: draw;
+  animation-duration: 4000ms;
+  background: black;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 10%;
+  }
+
+  0% {
+    left: 0;
+  }
+}
+
+@keyframes draw {
+  0% {
+    width: 6px;
+  }
+  50% {
+    width: 100px;
+  }
+  100% {
+    width: 6px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

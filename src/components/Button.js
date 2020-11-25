@@ -12,6 +12,8 @@ import { faShoppingCart, faBox } from "@fortawesome/free-solid-svg-icons";
 
 export default function Button() {
   const [add, setAdd] = useState(false);
+  const [login, setLogin] = useState(0);
+
   return (
     <section className="mb-4">
       <h1>Buttons</h1>
@@ -81,25 +83,38 @@ export default function Button() {
       </div>
 
       {/*button 3*/}
+      <div className="row">
+        <div className="py-4 d-flex text-center">
+          <div className="button-3 mr-4" onClick={() => setAdd(!add)}>
+            <span className={add ? "add-to-cart clicked-3" : "add-to-cart"}>
+              Add to Cart
+            </span>
+            <span className={add ? "added clicked-4" : "added"}>Added</span>
+            <div className="icon-3">
+              <FontAwesomeIcon
+                icon={faShoppingCart}
+                size="lg"
+                className={add ? "cart clicked-1" : "cart"}
+              />
 
-      <div className="py-4 d-flex text-center">
-        <div className="button-3 mr-4" onClick={() => setAdd(!add)}>
-          <span className={add ? "add-to-cart clicked-3" : "add-to-cart"}>
-            Add to Cart
-          </span>
-          <span className={add ? "added clicked-4" : "added"}>Added</span>
-          <div className="icon-3">
-            <FontAwesomeIcon
-              icon={faShoppingCart}
-              size="lg"
-              className={add ? "cart clicked-1" : "cart"}
-            />
+              <FontAwesomeIcon
+                icon={faBox}
+                size="lg"
+                className={add ? "box clicked-2" : "box"}
+              />
+            </div>
+          </div>
+        </div>
 
-            <FontAwesomeIcon
-              icon={faBox}
-              size="lg"
-              className={add ? "box clicked-2" : "box"}
-            />
+        <div className="py-4 text-center">
+          <div
+            className="button-4 mr-4"
+            onClick={() => setLogin(login !== 2 ? login + 1 : 0)}
+          >
+            <span className="mr-2">Login</span>
+            <div className="lock-container" />
+            <div className="lock" />
+            <div className="keyhole" />
           </div>
         </div>
       </div>
