@@ -8,7 +8,12 @@ import {
   faInstagram,
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
-import { faShoppingCart, faBox } from "@fortawesome/free-solid-svg-icons";
+import {
+  faShoppingCart,
+  faBox,
+  faThumbsUp,
+  faHeart
+} from "@fortawesome/free-solid-svg-icons";
 import TwitterFav from "./TwitterFav";
 
 export default function Button() {
@@ -18,7 +23,7 @@ export default function Button() {
 
   return (
     <section className="mb-4">
-      <h1>Buttons</h1>
+      <h1>Buttons & Emojis</h1>
       <hr />
       {/*button 1*/}
 
@@ -143,6 +148,58 @@ export default function Button() {
             <label for="checkbox">
               <TwitterFav />
             </label>
+          </div>
+        </div>
+
+        <div className="py-4 d-flex text-center">
+          <div className="button-6 mr-4">
+            <span>
+              <span className="d-flex justify-content-center align-items-center m-1">
+                <span className="like-button d-flex justify-content-center align-items-center mr-1">
+                  <FontAwesomeIcon
+                    icon={faThumbsUp}
+                    style={{ color: "white" }}
+                    className="like"
+                  />
+                </span>
+                <span className="love-button d-flex justify-content-center align-items-center mr-1">
+                  <FontAwesomeIcon
+                    icon={faHeart}
+                    style={{ color: "white" }}
+                    className="love"
+                  />
+                </span>
+                <span className="face-emoji d-flex justify-content-center align-items-center mr-1">
+                  <div className="face">
+                    <div className="eyes" />
+                    <div className="mouth">
+                      <div className="tongue" />
+                    </div>
+                  </div>
+                </span>
+                <span className="face-emoji d-flex justify-content-center align-items-center mr-1">
+                  <div className="face-wow">
+                    <div className="eyebrows" />
+                    <div className="wow-eyes" />
+                    <div className="wow-mouth" />
+                  </div>
+                </span>
+                <span className="face-emoji d-flex justify-content-center align-items-center mr-1">
+                  <div className="face-sad">
+                    <div className="sad-eyebrows" />
+                    <div className="sad-eyes" />
+                    <div className="sad-mouth" />
+                  </div>
+                </span>
+                <span className="angry-emoji d-flex justify-content-center align-items-center mr-1">
+                  <div className="face-angry">
+                    <div className="angry-eyebrows" />
+                    <div className="angry-eyes" />
+                    <div className="angry-mouth" />
+                  </div>
+                </span>
+              </span>
+            </span>
           </div>
         </div>
       </div>

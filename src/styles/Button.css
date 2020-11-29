@@ -319,14 +319,6 @@ button:focus {
   transition: 0.3s transform ease-in-out;
 }
 
-.button-5 .icon-3 {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  border-radius: 60px;
-  box-sizing: border-box;
-}
-
 .button-5:hover {
   transform: scale(0.9);
 }
@@ -575,5 +567,512 @@ svg #main-circ {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.button-6 {
+  position: relative;
+  height: 60px;
+  width: 350px;
+  font-size: 15px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s transform ease-in-out;
+}
+
+.button-6 span {
+  position: relative;
+  font-size: 1.2em;
+}
+
+.like-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: cornflowerblue;
+}
+
+.like {
+  transform-origin: 0% 100%;
+  animation: like 2s infinite;
+}
+
+@keyframes like {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg) translateY(-5px);
+  }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.love-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #e2264d;
+}
+
+.love {
+  animation: heart-beat 2s infinite alternate;
+}
+
+@keyframes heart-beat {
+  25% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.6);
+  }
+}
+
+.face-emoji {
+  border-radius: 50%;
+  background-color: #ffda6a;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.angry-emoji {
+  border-radius: 50%;
+  background: linear-gradient(#d5234c, #ffda6a);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+  animation: angry-color 2s ease-in infinite;
+}
+
+.face {
+  height: 50px;
+  width: 50px;
+  animation: haha-face 2s linear infinite;
+}
+
+.eyes {
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  left: 20px;
+  top: 18px;
+  background-color: transparent;
+  border-radius: 2px;
+  box-shadow: -10px 2px 0 0 #000, 10px -2px 0 0 #000;
+  transform: rotate(20deg);
+}
+
+.eyes::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  left: -1px;
+  background-color: transparent;
+  border-radius: 2px;
+  box-shadow: -10px -2px 0 0 #000, 10px 2px 0 0 #000;
+  transform: rotate(-40deg);
+}
+
+.mouth {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  top: 55%;
+  left: 10px;
+  background-color: black;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  animation: haha-mouth 2s linear infinite;
+}
+
+.tongue {
+  position: absolute;
+  height: 10px;
+  width: 20px;
+  left: 5px;
+  background-color: #f55064;
+  border-radius: 50%;
+  bottom: -1px;
+}
+
+@keyframes haha-face {
+  10%,
+  30%,
+  50% {
+    transform: translateY(3px);
+  }
+  20%,
+  40% {
+    transform: translateY(2px);
+  }
+  60%,
+  80% {
+    transform: translateY(0px);
+  }
+  70%,
+  90% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes haha-mouth {
+  10%,
+  30%,
+  50% {
+    transform: scale(0.8);
+    top: 50%;
+  }
+  20%,
+  40% {
+    transform: scale(1);
+    top: 50%;
+  }
+  60%,
+  80% {
+    transform: scale(1.2);
+    top: 55%;
+  }
+  70%,
+  90% {
+    transform: translateY(1.1);
+    top: 55%;
+  }
+}
+
+.face-wow {
+  height: 50px;
+  width: 50px;
+  animation: wow-face 2s linear infinite;
+}
+
+.eyebrows {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  left: 23px;
+  top: 10px;
+  border-radius: 50%;
+  box-shadow: -5px 0 0 #000, -15px 0 0 #000, 5px 0 0 #000, 15px 0 0 #000;
+  animation: wow-brows 2s linear infinite;
+}
+
+.eyebrows::before,
+.eyebrows::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 15px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-top-color: black;
+  top: -2px;
+}
+
+.eyebrows::before {
+  margin-left: -20px;
+}
+.eyebrows::after {
+  margin-left: 1px;
+}
+
+.wow-eyes {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  left: 22px;
+  top: 17px;
+  border-radius: 50%;
+  box-shadow: 10px 0 0 0 #000, -10px 0 0 0 #000;
+}
+
+.wow-mouth {
+  position: absolute;
+  width: 12px;
+  height: 15px;
+  left: 22px;
+  top: 55%;
+  border-radius: 50%;
+  background-color: black;
+  animation: wow-mouth 2s linear infinite;
+}
+
+@keyframes wow-face {
+  15%,
+  25% {
+    transform: rotate(20deg) translateX(-10px);
+  }
+  45%,
+  65% {
+    transform: rotate(-20deg) translateX(10px);
+  }
+  75%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
+@keyframes wow-brows {
+  15%,
+  65% {
+    top: 10px;
+  }
+  75%,
+  100%,
+  0% {
+    top: 5px;
+  }
+}
+
+@keyframes wow-mouth {
+  10%,
+  30% {
+    width: 8px;
+    left: 20px;
+    height: 10px;
+  }
+  50%,
+  70% {
+    width: 12px;
+    height: 15px;
+    left: 22px;
+  }
+  75%,
+  100% {
+    height: 18px;
+  }
+}
+
+.face-sad {
+  height: 50px;
+  width: 50px;
+  animation: sad-face 2s linear infinite;
+}
+
+.sad-eyebrows {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  left: 24px;
+  top: 10px;
+  border-radius: 50%;
+  box-shadow: -16px 5px 0 0 #000, -9px 0 0 0 #000, 9px 0 0 0 #000,
+    16px 5px 0 0 #000;
+  animation: sad-brows 2s linear infinite;
+}
+
+.sad-eyebrows::before,
+.sad-eyebrows::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 15px;
+  left: -7px;
+  top: 1px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-top-color: black;
+}
+
+.sad-eyebrows::before {
+  margin-left: -10px;
+  transform: rotate(-30deg);
+}
+.sad-eyebrows::after {
+  margin-left: 10px;
+  transform: rotate(30deg);
+}
+
+.sad-eyes {
+  position: absolute;
+  width: 8px;
+  height: 10px;
+  left: 22px;
+  top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 0 0 0 #000, -10px 0 0 0 #000;
+}
+
+.sad-mouth {
+  position: absolute;
+  width: 21px;
+  height: 50px;
+  left: 16px;
+  top: 55%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  border-top-color: black;
+  animation: sad-mouth 2s ease-in infinite;
+}
+
+.sad-mouth::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  left: 6px;
+  top: 1px;
+  border-radius: 50%;
+  box-shadow: -5px 0 0 0 #000, 5px 0 0 0 #000;
+}
+
+.sad-eyes::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  transform-origin: 0% 0%;
+  background: #548dff;
+  border-radius: 0 10px 10px 10px;
+  animation: tear-drop 2s ease-in infinite;
+}
+
+@keyframes sad-face {
+  25%,
+  35% {
+    transform: translateY(-5px);
+  }
+  55%,
+  90% {
+    transform: translateY(3px);
+  }
+  100%,
+  0% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes sad-mouth {
+  25%,
+  35% {
+    transform: scale(0.85) translateY(7px);
+  }
+  55%,
+  100%,
+  0% {
+    transform: scale(1) translateY(5px);
+  }
+}
+
+@keyframes tear-drop {
+  0%,
+  100% {
+    top: 12px;
+    left: 14px;
+    transform: rotate(45deg) scale(0);
+  }
+  25% {
+    left: 14px;
+    transform: rotate(45deg) scale(1.5);
+    z-index: 1;
+  }
+  49.9% {
+    top: 25px;
+    left: 14px;
+    transform: rotate(45deg) scale(0);
+  }
+  50% {
+    top: 12px;
+    left: -6px;
+    transform: rotate(45deg) scale(0);
+  }
+  75% {
+    left: -6px;
+    transform: rotate(45deg) scale(1.5);
+  }
+  99.9% {
+    top: 25px;
+    left: -6px;
+    transform: rotate(45deg) scale(0);
+    z-index: 1;
+  }
+}
+
+.face-angry {
+  height: 50px;
+  width: 50px;
+  animation: angry-face 2s ease-in infinite;
+}
+
+.angry-eyebrows {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  left: 24px;
+  top: 5px;
+  border-radius: 50%;
+  box-shadow: -16px 8px 0 0 #000, -6px 12px 0 0 #000, 6px 12px 0 0 #000,
+    16px 9px 0 0 #000;
+  animation: angry-brows 2s linear infinite;
+}
+
+.angry-eyebrows::before,
+.angry-eyebrows::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 15px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-bottom-color: black;
+}
+
+.angry-eyebrows::after {
+  margin-left: 2px;
+  transform: rotate(-15deg);
+}
+
+.angry-eyebrows::before {
+  margin-left: -18px;
+  transform: rotate(15deg);
+}
+
+.angry-eyes {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 22px;
+  top: 18px;
+  border-radius: 50%;
+  box-shadow: 10px 0 0 0 #000, -10px 0 0 0 #000;
+}
+
+.angry-mouth {
+  position: absolute;
+  width: 21px;
+  height: 10px;
+  left: 16px;
+  bottom: 12px;
+  border-radius: 50%;
+  background: #000;
+  animation: angry-mouth 2s ease-in infinite;
+}
+
+@keyframes angry-face {
+  35%,
+  60% {
+    transform: translateX(0) translateY(5px) scale(0.9);
+  }
+  40%,
+  50% {
+    transform: translateX(-3px) translateY(5px) scale(0.9);
+  }
+  45%,
+  55% {
+    transform: translateX(3px) translateY(5px) scale(0.9);
+  }
+}
+
+@keyframes angry-mouth {
+  25%,
+  50% {
+    bottom: 10px;
+    height: 6px;
   }
 }
