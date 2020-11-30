@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Lines } from "../components";
+import { Button, Lines, ProgressBar } from "../components";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
         <div className="col-12">
           <Button />
           <Lines />
+          <ProgressBar />
         </div>
       </div>
     </>
