@@ -65,6 +65,9 @@ export default function Lines() {
               className="shining"
             />
           </div>
+          <div className="col-2 text-center">
+            <div className="draw-circle" />
+          </div>
         </div>
       </div>
     </section>

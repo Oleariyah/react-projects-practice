@@ -67,6 +67,19 @@
   animation-timing-function: ease-in-out;
 }
 
+.draw-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  animation-name: spin;
+  border: 3px solid transparent;
+  border-top-color: black;
+  border-bottom-color: black;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 4000ms;
+}
+
 @keyframes animate {
   0% {
     left: 0;
